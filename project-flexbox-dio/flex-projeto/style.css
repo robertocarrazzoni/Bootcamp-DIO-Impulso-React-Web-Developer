@@ -17,7 +17,7 @@ ul{
 ul li a{
     text-decoration: none;
 }
-div img{
+img{
     display: block;
     width: 100%;
 }
@@ -101,9 +101,7 @@ header .menu{
     margin-bottom: 10px;
     width: 90%;
 }
-#quem-somos img{
-    width: 420px;
-}
+
 .container-externo{
     background-color: var(--azulão);
     width: 100%;
