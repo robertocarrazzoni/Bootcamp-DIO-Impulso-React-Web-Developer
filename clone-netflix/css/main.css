@@ -1,0 +1,214 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dosis:wght@400;700&display=swap');
+:root{
+    --vermelho:#E50914;
+    --preto:#141414;
+    --bebas: 'Bebas Neue', cursive;
+    --dosis: 'Dosis', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--preto);
+    color: white;
+    font-family: var(--dosis);
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.logo{
+    margin-left: 10px;
+    color: yellow;
+    font-size: 40px;
+    font-family: var(--bebas);
+}
+.menu{
+    display: flex;
+    list-style: none;
+}
+.menu li a{
+    margin-right: 10px;
+    color: #aaa;
+    text-decoration: none;
+}
+.menu li a:hover{
+    color: #fff;
+}
+.filme-principal{
+    background-image: linear-gradient(rgba(0,0,0,.60),rgba(0,0,0,.60)100%),  url('/img/fundo-house.jpg');
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.filme-principal .descricao{
+    margin-bottom: 50px;
+}
+
+.titulo{
+    font-size: 60px;
+    font-family: 'Trebuchet MS', sans-serif;
+    margin-top: 15%;
+}
+.botao{
+    background-color: rgba(0,0,0,.50);
+    color: white;
+    padding: 15px;
+    border: none;
+    margin-right: 15px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+.botao a{
+    color: white;
+    text-decoration: none;  
+}
+.botao:hover{
+    background-color: white;
+    color: black;
+}
+.botao i{
+    margin-right: 5px;
+}
+.container{
+    margin-left: 20px;
+}
+.filme-principal .container{
+    width: 70%;
+}
+.modal {
+    display: none;
+    text-align: left;
+    backdrop-filter: blur(2px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+}  
+    .modal:target {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+     
+    .modal__overlay {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        cursor: default;
+    }
+     
+    .modal__content {
+        max-width: 70vw;
+        min-width: 260px;
+        position: relative;
+        background-color: var(--preto);
+        padding: 2rem;
+        box-shadow: 0px 0px 10px yellow;
+    }
+    .conteudo h2{
+        margin: 20px;
+        font-size: 2.5em;
+        color: yellow;
+    }
+    .bloco-conteudo{
+        margin: 10px 30px;
+    }
+     
+    .modal__close {
+        font-size: 2em;
+        color: white;
+        text-decoration: none;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        padding: 0 0.5rem;
+        display: inline-block;
+    }
+.titulo2{
+    font-size: 2.6em;
+    margin: 20px;
+}
+.carrosel-series{
+    margin-top: 20px;
+}
+.box-filme{
+    width: 100%;
+}
+.informacao{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 4em;
+}
+.info-box{
+    width: 60vw;
+    margin-left: 2em;
+    text-align: justify;
+}
+.img-info{
+    max-width: 300px;
+}
+.info{
+    max-width: 320px;
+}
+.house{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+}
+.house::before{
+    content: '';
+    height: 4px;
+    width: 70vw;
+    background-color: white;
+}
+footer{
+    text-align: center;
+    line-height: 100px;
+    font-size: 12px;
+}
+
+@media screen and (max-width: 700px) {
+    .filme-principal{
+        height: 400px;
+        background-image: linear-gradient(rgba(0,0,0,.60),rgba(0,0,0,.60)100%), url('/img/capa-house.jpg');
+    }
+    .botao{
+     margin-top: 20px;
+ }   
+ .titulo{
+     font-size: 40px;
+     margin-top: 0px;
+ }
+ .filme-principal .descricao{
+    margin-bottom: 0px;
+}
+.informacao{
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.img-info{
+    width: 90%;
+}
+}
+@media screen and (min-width: 1000px) {
+    .descricao{
+        width: 50%;
+    }
+}
